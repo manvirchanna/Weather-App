@@ -14,7 +14,7 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    What's the weather like?
+                    What's the weather today like?
                 </h1>
             </div>
         </div>
@@ -22,7 +22,7 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-offset-4 is-4">
+                <div class="column is-offset-8 is-4">
                     <form method="POST">
                         {% csrf_token %}
                         <div class="field has-addons">
@@ -31,7 +31,7 @@
                             </div>
                             <div class="control">
                                 <button type="submit" class="button is-info">
-                                    Add City
+                                    Add City Name
                                 </button>
                             </div>
                         </div>
@@ -43,12 +43,12 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-offset-4 is-4">
+                <div class="column is-offset-6 is-4">
                     {% for city_weather in weather_data %}
                     <div class="box">
                         <article class="media">
                             <div class="media-left">
-                                <figure class="image is-50x50">
+                                <figure class="image is-80x80">
                                     <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Image">
                                 </figure>
                             </div>
